@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>🎸 Jammer Live</title>
+        <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+          <div class="container">
+              <header>
+                    <h1>🎸 Jammer Live</h1>
+                          <div class="admin-panel">
+                                  <button id="privateBtn">Приватный урок</button>
+                                          <button id="publicBtn">Открытый урок</button>
+                                                  <button id="endBtn">Завершить урок</button>
+                                                        </div>
+                                                            </header>
+
+                                                                <main>
+                                                                      <div class="video-container" id="videoContainer">
+                                                                              <video id="localVideo" autoplay muted playsinline></video>
+                                                                                      <video id="remoteVideo" autoplay playsinline></video>
+                                                                                            </div>
+
+                                                                                                  <div class="twitch-container" id="twitchContainer" style="display:none;">
+                                                                                                          <iframe
+                                                                                                                    src="https://player.twitch.tv/?channel=YOUR_TWITCH_CHANNEL&parent=yourdomain.com"
+                                                                                                                              height="480"
+                                                                                                                                        width="800"
+                                                                                                                                                  allowfullscreen>
+                                                                                                                                                          </iframe>
+                                                                                                                                                                </div>
+
+                                                                                                                                                                      <div class="chat-container">
+                                                                                                                                                                              <div id="chatMessages" class="chat-messages"></div>
+                                                                                                                                                                                      <input type="text" id="chatInput" placeholder="Написать сообщение...">
+                                                                                                                                                                                              <button id="sendBtn">Отправить</button>
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                        </main>
+                                                                                                                                                                                                          </div>
+
+                                                                                                                                                                                                            <script src="/socket.io/socket.io.js"></script>
+                                                                                                                                                                                                              <script src="script.js"></script>
+                                                                                                                                                                                                              </body>
+                                                                                                                                                                                                              </html>
